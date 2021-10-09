@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="calculadora">
+    <form class="display" name="display">
+      <input type="text" readonly class="value" name="txt"/>
+      <span class="num clear" onclick="display.txt.value = ''">C</span>
+      <span class="num" onclick="document.display.txt.value +='/'">/</span>
+      <span class="num" onclick="document.display.txt.value +='*'">*</span>
+      <span class="num" onclick="document.display.txt.value +='7'">7</span>
+      <span class="num" onclick="document.display.txt.value +='8'">8</span>
+      <span class="num" onclick="document.display.txt.value +='9'">9</span>
+      <span class="num" onclick="document.display.txt.value +='-'">-</span>
+      <span class="num" onclick="document.display.txt.value +='4'">4</span>
+      <span class="num" onclick="document.display.txt.value +='5'">5</span>
+      <span class="num" onclick="document.display.txt.value +='6'">6</span>
+      <span class="num plus" onclick="document.display.txt.value +='+'">+</span>
+      <span class="num" onclick="document.display.txt.value +='1'">1</span>
+      <span class="num" onclick="document.display.txt.value +='2'">2</span>
+      <span class="num" onclick="document.display.txt.value +='3'">3</span>
+      <span class="num" onclick="document.display.txt.value +='0'">0</span>
+      <span class="num" onclick="document.display.txt.value +='00'">00</span>
+      <span class="num" onclick="document.display.txt.value +='.'">.</span>
+      <span class="num equal" onclick="document.display.txt.value = eval(display.txt.value)">=</span>
+    </form>
+  </div>
+  <script type="text/javascript" src="vanilla-tilt.js"></script>
+<script type="text/javascript">
+	VanillaTilt.init(document.querySelector(".calculadora"), {
+		max: 25,
+		speed: 400,
+    glare: true,
+    "max-glare": 0.2,
+	});
+</script>
+</body>
+</html>
